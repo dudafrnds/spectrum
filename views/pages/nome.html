@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome Recebido</title>
+    <link rel="stylesheet" href="nome.css">
+</head>
+<body>
+    <h1>Nome Recebido</h1>
+    <p id="nomeExibido"></p>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const nome = urlParams.get('nome');
+        document.getElementById('nomeExibido').innerText = nome ? `Você digitou: ${nome}` : 'Nenhum nome foi digitado.';
+    </script>
+</body>
+</html>

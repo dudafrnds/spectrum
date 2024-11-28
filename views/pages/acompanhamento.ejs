@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include('../partials/nav') %>
+    
+    <form action="">
+      <h1>Digite seu Nome</h1>
+      <input type="text" id="nome" placeholder="Seu nome aqui" aria-label="Digite seu nome" /> <br>
+      <button type="button" onclick="enviarNome()">Consultar</button> <br>
+      <p id="mensagemErro" style="color: red"></p>
+<br>
+      <div class="Botaum">
+        <a href="formulario.html"><button id="backButton"><a href= "formulario.html">Voltar ao Formulário</a></p></button></a>
+      </div>
+    </br>
+      <div style="flex-grow: 1"></div>
+    <!-- Para empurrar o footer para baixo -->
+    
+</form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <%- include('../partials/footer') %> 
+  </br>
+    
+    <script>
+        function enviarNome() {
+  const nome = document.getElementById("nome").value;
+  if (nome) {
+    window.location.href = `nome.html?nome=${encodeURIComponent(nome)}`;
+  } else {
+    document.getElementById("mensagemErro").innerText = "Por favor, digite um nome.";
+  }
+}
+
+      </script>
+
+    <script src="script.js"></script>
+  
+  </body>
+</html>

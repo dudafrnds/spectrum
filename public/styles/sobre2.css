@@ -1,0 +1,241 @@
+/* Reset básico para garantir consistência */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover;
+    
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-image: url('img/Fichas\ Médicas\ \(12\).png');
+    background-repeat: no-repeat;
+    background-size:100%;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    background-size: cover;
+}
+#logo {
+    height: 70px;
+    
+    }
+    header {
+   
+        top: 0;
+        background-color: #2d60b4;
+        color: #fff;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    nav ul li {
+        flex: content;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+    
+    .link-container {
+        text-align: center; /* Centraliza o link na tela */
+        margin-top: 250px; /* Adiciona um espaço acima do link */
+    }
+    a {
+        font-family: 'Roboto', sans-serif; /* Usa a fonte Roboto */
+        font-size: 20px; /* Define o tamanho da fonte do link */
+        color: #007bff; /* Define a cor do link */
+        text-decoration: none; /* Remove o sublinhado do link */
+    }
+    a:hover {
+        text-decoration: underline; /* Adiciona o sublinhado quando o link é hovered */
+    }
+    
+    #logo {
+    height: 70px;
+    
+    }
+    
+    .header-main {
+        flex: content;
+        align-items: start;
+        justify-content: start;
+    }
+    
+    
+    .sidebar {
+        width: 250px;
+        height: 100vh;
+        background-color: #003B78;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    
+    
+    
+    
+    .search-bar {
+        width: 150px;
+        height: 30px;
+        background-color: #F1F1F1;
+        border-radius: 15px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    
+    
+    .menu {
+        list-style-type: none;
+        padding: 0;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    
+    .menu li {
+        margin: 20px 0;
+       
+    }
+    
+    .menu li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .menu li a img {
+        margin-right: 10px;
+    }
+    
+    .menu li a:hover {
+        text-decoration: underline;
+    }
+
+/*main {
+    padding: 5px;
+    text-align: center;
+   
+
+}
+
+
+.titulo {
+    font-family: 'anton', sans-serif;
+    color: #f6ae28;
+    font-size: 36px;
+    margin: 50px auto;
+    max-width: 500px;
+}
+
+
+
+.texto-central {
+    margin: 5px auto;
+    max-width: 700px;
+    font-size: 24px;
+    text-align: justify; 
+}
+
+.anto-regular {
+    
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      
+      
+}*/
+
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #0056b3; /* Altere a cor conforme desejado */
+}
+.texto-central {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+footer {
+    background-color: #2d60b4; /* Fundo azul */
+    color: white; /* Texto branco */
+    padding: 10px; /* Diminuindo o padding */
+    text-align: center;
+    margin-top: auto; /* Faz o footer ficar no rodapé */
+}
+footer h2 {
+    color: #f6ae28; /* Título amarelo */
+    margin: 5px 0; /* Reduzindo a margem */
+}
+footer p {
+    margin: 3px 0; /* Reduzindo a margem */
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Alinha as seções de forma equilibrada */
+    flex-wrap: wrap;
+    max-width: 1000px; /* Define uma largura máxima */
+    margin: 0 auto; /* Centraliza o container */
+}
+.footer-section {
+    max-width: 200px; /* Diminuindo a largura máxima */
+    margin: 5px; /* Ajustando a margem */
+    text-align: center; /* Centraliza o texto */
+}
+.social-links a {
+    color: #FFD700;
+    margin: 0 5px; /* Diminuindo a margem */
+    text-decoration: none;
+}
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+

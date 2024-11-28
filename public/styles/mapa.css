@@ -1,0 +1,141 @@
+
+
+*{ box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+
+body {
+    background-color: #F1F1F1; 
+    background-size: cover; 
+    position: absolute;
+    background-repeat: no-repeat; 
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif; 
+    width: 100%;
+    height: 100%;
+}
+header {
+   
+    top: 0;
+    background-color: #2d60b4;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    flex: content;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.link-container {
+    text-align: center; /* Centraliza o link na tela */
+    margin-top: 250px; /* Adiciona um espaço acima do link */
+}
+a {
+    font-family: 'Roboto', sans-serif; /* Usa a fonte Roboto */
+    font-size: 20px; /* Define o tamanho da fonte do link */
+    color: #007bff; /* Define a cor do link */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+a:hover {
+    text-decoration: underline; /* Adiciona o sublinhado quando o link é hovered */
+}
+
+#logo {
+    height: 70px;
+}
+
+
+
+#map {
+    height: 400px; /* Tamanho do mapa */
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+footer {
+    background-color: #2d60b4; /* Fundo azul */
+    color: white; /* Texto branco */
+    padding: 10px; /* Diminuindo o padding */
+    text-align: center;
+    margin-top: auto; /* Faz o footer ficar no rodapé */
+}
+footer h2 {
+    color: #f6ae28; /* Título amarelo */
+    margin: 5px 0; /* Reduzindo a margem */
+    font-size: 150%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+footer p {
+    margin: 3px 0; /* Reduzindo a margem */
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Alinha as seções de forma equilibrada */
+    flex-wrap: wrap;
+    max-width: 1000px; /* Define uma largura máxima */
+    margin: 0 auto; /* Centraliza o container */
+}
+.footer-section {
+    max-width: 200px; /* Diminuindo a largura máxima */
+    margin: 5px; /* Ajustando a margem */
+    text-align: center; /* Centraliza o texto */
+}
+.social-links a {
+    color: #FFD700;
+    margin: 0 5px; /* Diminuindo a margem */
+    text-decoration: none;
+}
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon 1.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../public/styles/mapa.css" />
+    <title>Mapa</title>
+  </head>
+
+  <body>
+    <header>
+        <nav>
+            
+            <ul> 
+         <div class="header-main">
+            <a href="./home.html">  
+                <img id="logo" src="../../public/imagens/logos em.png" alt="logo" class="logo">
+            </a>
+        </div>
+                <li><a href="./formulario.html">Formulário</a></li>
+                <li><a href="./acompanhamento.html">Acompanhamento</a></li>
+                <li><a href="./artigo.html">Artigos</a></li>
+                <li><a href="dicas.html">Dicas</a></li>
+                <li><a href="./sobre2.html">Sobre Nós</a></li>
+                <li><a href="index.html">Cadastro</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="./home.html">Home</a></li>
+               
+            
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Encontre uma ajuda mais perto de você:</h2>
+        <div id="map"></div>
+    </div>
+
+    <div id="location"></div>
+
+    <script>
+        // Chave de API do PositionStack (substitua com a sua chave)
+        const apiKey = 'https://geocode.maps.co/search?q= address &api_key=67486f728d771957161443wcb532df1'; // Registre-se no PositionStack e obtenha a chave
+
+        // Função para obter a localização do usuário
+        function obterLocalizacao() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    const lat = position.coords.latitude;
+                    const lng = position.coords.longitude;
+
+                    // Faz a requisição para a API PositionStack
+                    const url = `https://geocode.maps.co/search?q`;
+
+                    fetch(url)
+                        .then(response => response.json())
+                        .then(data => {
+                            const localizacao = data.data[0];
+                            const locationDiv = document.getElementById('location');
+                            locationDiv.innerHTML = `
+                                <p>Localização: ${localizacao.label}</p>
+                                <p>Latitude: ${lat}</p>
+                                <p>Longitude: ${lng}</p>
+                            `;
+                        })
+                        .catch(error => {
+                            console.error('Erro ao acessar a API PositionStack', error);
+                        });
+                }, function() {
+                    alert("Erro ao acessar sua localização.");
+                });
+            } else {
+                alert("Geolocalização não é suportada neste navegador.");
+            }
+        }
+
+        // Chama a função para obter a localização ao carregar a página
+        window.onload = obterLocalizacao;
+    </script>
+
+
+    
+<div style="flex-grow: 1;"></div> <!-- Para empurrar o footer para baixo -->
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h2>Entre em Contato</h2>
+            <p>Email: contato@exemplo.com</p>
+            <p>Telefone: (11) 1234-5678</p>
+            <p>Endereço: Rua Exemplo, 123, Cidade - Estado</p>
+        </div>
+        <div class="footer-section">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma empresa dedicada a oferecer o melhor serviço ao cliente.</p>
+        </div>
+        <div class="footer-section">
+            <h2>Navegação</h2>
+            <p><a href="./home.html" style="color:white;">Home</a></p>
+            <p><a href="./acompanhamento.html" style="color:white;">Acompanhamento</a></p>
+            <p><a href="./artigo.html" style="color:white;">Dicas</a></p>
+            <p><a href="./dicas.html" style="color:white;">Artigos</a></p>
+            <p><a href="./mapa.html" style="color:white;">Mapa</a></p>
+        </div>
+    </div>
+
+
+    <p>&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
+</footer>
+
+
+
+</body>
+</html>

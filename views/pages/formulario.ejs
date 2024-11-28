@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<%- include('../partials/head') %>
+<body>
+    
+   <%- include('../partials/nav') %>
+
+
+    <div class="container">
+        <h1>Questionário de Conforto em Sala de Aula</h1>
+        <form id="questionario">
+            <!-- Pergunta 1 -->
+
+            <div class="pergunta">
+                <label>Escreva seu nome completo:</label><br>
+                <input type="text" id="nome" name="nome" placeholder="Digite aqui">
+            </div>
+
+            <div class="pergunta">
+                <label>Você se incomoda com a luz fluorescente da sala de aula?</label><br>
+                <input type="radio" id="luzSim" name="luz" value="Sim">
+                <label for="luzSim">Sim</label>
+                <input type="radio" id="luzNao" name="luz" value="Não">
+                <label for="luzNao">Não</label>
+            </div>
+    
+            <div class="pergunta">
+                <label>Se sim, qual tipo de iluminação seria mais confortável para você?</label><br>
+                <input type="radio" id="luzNatural" name="tipoLuz" value="Luz natural">
+                <label for="luzNatural">Luz natural</label><br>
+                <input type="radio" id="luzSuave" name="tipoLuz" value="Luz suave">
+                <label for="luzSuave">Luz suave (ex: lâmpadas de luz quente)</label><br>
+                <input type="radio" id="led" name="tipoLuz" value="Lâmpadas de LED">
+                <label for="led">Lâmpadas de LED</label><br>
+                <input type="radio" id="filtroLuz" name="tipoLuz" value="Filtros de luz para lâmpadas fluorescentes">
+                <label for="filtroLuz">Filtros de luz para lâmpadas fluorescentes</label><br>
+                <input type="text" id="outroLuz" name="outroLuz" placeholder="Outro (especifique)">
+            </div>
+            
+            <!-- Pergunta 2 -->
+            <div class="pergunta">
+                <label>O nível de ruído na sala de aula é confortável para você?</label><br>
+                <input type="radio" id="ruidoSim" name="ruido" value="Sim">
+                <label for="ruidoSim">Sim</label><br>
+                <input type="radio" id="ruidoNao" name="ruido" value="Não">
+                <label for="ruidoNao">Não</label>
+            </div>
+            <div class="pergunta">
+                <label>Se não, que tipo de ajustes você acha que ajudariam?</label><br>
+                <input type="radio" id="fone" name="ajustesRuido" value="Uso de fones de ouvido com cancelamento de ruído">
+                <label for="fone">Uso de fones de ouvido com cancelamento de ruído</label><br>
+                <input type="radio" id="silencio" name="ajustesRuido" value="Áreas de silêncio ou salas de descanso">
+                <label for="silencio">Áreas de silêncio ou salas de descanso</label><br>
+                <input type="radio" id="reduzirBarulho" name="ajustesRuido" value="Redução de barulho durante atividades específicas">
+                <label for="reduzirBarulho">Redução de barulho durante atividades específicas</label><br>
+                <input type="radio" id="absorvedoresSom" name="ajustesRuido" value="Uso de absorvedores de som (ex: painéis acústicos)">
+                <label for="absorvedoresSom">Uso de absorvedores de som (ex: painéis acústicos)</label><br>
+                <input type="text" id="outroRuido" name="outroRuido" placeholder="Outro (especifique)">
+            </div>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+        <div id="resultado"></div>
+        
+    </div>
+
+    <script src="forms.js"></script>
+    <div style="flex-grow: 1;"></div> <!-- Para empurrar o footer para baixo -->
+
+    <%- include('../partials/footer') %> 
+
+</body>
+</html>

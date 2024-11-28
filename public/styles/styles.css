@@ -1,0 +1,77 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('img/fundo.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9); /* Leve transparência para ver a imagem de fundo */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 18rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px; /* Espaço acima de cada label */
+    margin-bottom: 5px; /* Espaço abaixo de cada label */
+}
+
+input, select {
+    width: 90%; /* Preenche a largura disponível */
+    padding: 10px;
+    margin-bottom: 15px; /* Espaço abaixo de cada input/select */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #f6ae28;
+}
+
+
+
+button {
+    padding: 10px;
+    background-color: #f6ae28;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f6ae28;
+}
+
+form select {
+    width: 100%; 
+    max-width: 300px; 
+    padding: 15px; 
+    margin: 10px 0 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+    font-size: 16px; 
+  }
+  
