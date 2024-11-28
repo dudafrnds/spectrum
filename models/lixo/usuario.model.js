@@ -11,9 +11,6 @@ const UsuarioSchema = new Schema({
         required: true },
 })
 
-
-
-
 const Usuario = model('Usuario', UsuarioSchema);
 
 

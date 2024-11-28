@@ -4,6 +4,7 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 const principalRoutes = require("./routes/principal.route");
+const modulosRoutes = require("./routes/modulos.route");
 const session = require("express-session"); // Middleware usado para autenticacao
 const flash = require("connect-flash"); // deve ser chamada depois de express-session.
 // const dashboardRoutes = require("./routes/dashboard.route");
@@ -32,11 +33,12 @@ app.use(
 );
 
 app.use("/", principalRoutes);
-// app.use("/dashboard", verificarUserLogado, dashboardRoutes);
+app.use("/modulos", modulosRoutes);
 
 app.get("*", (req, res) => {
   res.status(404).render("index", {
     mensagem: "Erro 404 - Rota nao encontrada",
+    estilo: "home.css",
     titulo: "Rota nao encontrada",
   });
   console.log("rota nao encontrada");

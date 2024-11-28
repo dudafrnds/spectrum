@@ -1,7 +1,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: url('img/fundo.png') no-repeat center center fixed;
+    background: url('../imagens/fundo.png') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     display: flex;
@@ -63,15 +63,3 @@ button {
 button:hover {
     background-color: #f6ae28;
 }
-
-form select {
-    width: 100%; 
-    max-width: 300px; 
-    padding: 15px; 
-    margin: 10px 0 20px; 
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
-    font-size: 16px; 
-  }
-  
