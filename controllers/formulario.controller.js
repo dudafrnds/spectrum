@@ -1,10 +1,16 @@
-const Cliente = require("../models/lixo/cliente.model");
-const Fatura = require("../models/lixo/fatura.model");
+const Formulario = require("../models/formulario.model");
 const { body, validationResult } = require("express-validator");
 
-const validarFormulario = [
-    body("nome", "Email não pode estar vazio").notEmpty(),
-    body("email", "Email não pode estar vazio").notEmpty(),
-    body("telefone", "Telefone não pode estar vazio").notEmpty(),
-    body("endereco", "Endereço não pode estar vazio").notEmpty(),
-  ];
+const mostrarFormulario = async (req, res) => {
+
+  dados = Formulario.getFormulario(1);
+
+  res.render("pages/formulario", {
+    titulo: "Formulario",
+    estilo: "formulario.css",
+    dados
+  });
+
+}
+
+module.exports = { mostrarFormulario }

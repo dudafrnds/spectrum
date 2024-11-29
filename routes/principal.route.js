@@ -2,6 +2,9 @@ const express = require("express");
 const router = express.Router();
 
 const { acompanhamentoAlunos } = require("../controllers/aluno.controller");
+const { mostrarFormulario } = require("../controllers/formulario.controller");
+
+
 
 router.get("/", (req, res) => {
   res.render("pages/index", {
@@ -11,13 +14,10 @@ router.get("/", (req, res) => {
   });
 });
 
-router.get("/formulario", (req, res) => {
-  res.render("pages/formulario", {
-    titulo: "Formulario",
-    estilo: "formulario.css",
-    info: req.flash("info")[0],
-  });
-});
+router.get("/formulario", mostrarFormulario);
+
+// router.get("/formulario", mostrarFormulario);
+
 
 router.post("/formulario/:id?", (req, res) => {
   res.render("pages/formulario", {

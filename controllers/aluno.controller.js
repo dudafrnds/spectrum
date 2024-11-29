@@ -4,7 +4,7 @@ const { body, validationResult } = require("express-validator");
 const Aluno = require("../models/aluno.model");
 
 const acompanhamentoAlunos = async (req, res) => {
-  dados = Aluno.getAlunos;
+  dados = Aluno.getAlunos();
 
   res.render("pages/acompanhamento", {
     titulo: "acompanhamento",
